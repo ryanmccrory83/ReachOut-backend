@@ -1,0 +1,16 @@
+
+exports.up = function(knex, Promise) {
+    return knex.schema.createTable('user', (table) => {
+        table.increments('id').primary();
+        table.text('first_name');
+        table.text('last_name');
+        table.text('image_url');
+        table.text('religious_preference');
+        table.text('military_branch');
+        table.text('contacts');
+    })
+};
+
+exports.down = function(knex, Promise) {
+    return knex.schema.dropTableIfExists('user');
+};
