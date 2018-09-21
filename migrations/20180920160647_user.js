@@ -8,6 +8,7 @@ exports.up = function(knex, Promise) {
         table.text('religious_preference');
         table.text('military_branch');
         table.text('contacts');
+        table.text('auth_token');
     })
 };
 
