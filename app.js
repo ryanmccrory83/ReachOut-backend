@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const { Model } = require('objection');
+// const { Model } = require('objection');
 
-Model.knex(knex);
+// Model.knex(knex);
 
 const user = require('./routes/user');
 
