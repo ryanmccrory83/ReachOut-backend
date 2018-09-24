@@ -20,4 +20,10 @@ router.get('/:id', (request, response, next) => {
     .catch(next);
 });
 
+router.post('/user', (request, response, next) => {
+    queries.createUser(request.body).then(item => {
+        response.status(201).json({item});
+    }).catch(console.error)
+})
+
 module.exports = router;
